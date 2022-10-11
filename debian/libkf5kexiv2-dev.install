@@ -1,0 +1,4 @@
+usr/include/KF5/KExiv2/
+usr/include/KF5/libkexiv2_version.h
+usr/lib/*/cmake/KF5KExiv2/
+usr/lib/*/libKF5KExiv2.so

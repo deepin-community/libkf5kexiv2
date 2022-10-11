@@ -1,0 +1,43 @@
+Source: libkf5kexiv2
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+           Pino Toscano <pino@debian.org>,
+           Sune Vuorela <sune@debian.org>,
+Build-Depends: cmake (>= 3.16.0~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.80.0~),
+               libexiv2-dev (>= 0.25~),
+               pkg-config,
+               pkg-kde-tools (>= 0.12),
+               qtbase5-dev (>= 5.15.0~),
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: https://invent.kde.org/graphics/libkexiv2
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/libkexiv2
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/libkexiv2.git
+
+Package: libkf5kexiv2-15.0.0
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Qt like interface for the libexiv2 library
+ Libkexiv2 is a Qt wrapper around the Exiv2 library, used to manipulate
+ pictures metadata.
+ .
+ This package contains the libkexiv2 library.
+
+Package: libkf5kexiv2-dev
+Section: libdevel
+Architecture: any
+Depends: libkf5kexiv2-15.0.0 (= ${binary:Version}), ${misc:Depends}
+Multi-Arch: same
+Description: Qt-like interface for the libexiv2 library -- development files
+ Libkexiv2 is a Qt wrapper around the Exiv2 library, used to manipulate
+ pictures metadata.
+ .
+ This package contains the development files and the documentation.
+ The library documentation is available in the kexiv2.h header file.
